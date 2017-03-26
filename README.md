@@ -3,4 +3,4 @@ Choosing train available seat for customer
 
 Result on Public/index.html
 
-Asset on Core/
+Asset on sharedCore/
