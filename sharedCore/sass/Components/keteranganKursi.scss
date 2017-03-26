@@ -1,0 +1,55 @@
+.gerbongSeat {
+	background: #f2f2f2;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	h4 {
+		padding: 10px;
+		text-align: center;
+		background: #fff;
+	}
+	ul {
+		font-size: 0;
+		overflow: hidden;
+		li {
+			font-size: 14px;
+			> div {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 10px;
+				margin: 0 5px;
+				cursor: pointer;
+			}
+		}
+	}
+	.leftSeat {
+		float: left;
+	}
+	.rightSeat {
+		float: right;
+	}
+
+	.taken {
+		background: $grey;
+		border: 1px solid $grey;
+		color: $grey;
+		pointer-events: none;
+	}
+	.available {
+		background: white;
+		border: 1px solid $red;
+	}
+	.active {
+		background: $orange;
+		border: 1px solid $orange;
+		color: #fff;
+	}
+	.choosed, .chosedd {
+		background: $red;
+		border: 1px solid $red;
+		color: #fff;
+		pointer-events: none;
+	}
+	.boxPassFirst {
+		cursor: default;
+	}
+}

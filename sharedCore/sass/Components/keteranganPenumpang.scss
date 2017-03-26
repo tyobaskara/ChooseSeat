@@ -1,0 +1,90 @@
+.keteranganPenumpang {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	ul.info {
+		li {
+			> div {
+				margin: 0 10px;
+				position: relative;
+				padding-left: 20px;
+				line-height: 1;
+				&:before {
+					content: " ";
+					width: 10px;
+					height: 10px;
+					background: $grey;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				@include breakpoint(mobile){
+					margin: 0 5px;
+				}
+			}
+		}
+		.notAvailable:before {
+			background: $grey;
+		}
+		.available:before {
+			background: white;
+			border: 1px solid $red;
+		}
+		.choosed:before {
+			background: $red;
+		}
+		.choosing:before {
+			background: $orange;
+		}
+	}
+	ul {
+		list-style-type: none;
+		font-size: 0;
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+			@include breakpoint(mobile){
+				font-size: 3vw;
+			}
+		}
+	}
+
+	.boxPass {
+		position: relative;
+		min-height: 50px;
+		border: 1px solid #ccc;
+		padding: 10px;
+		margin: 10px 0;
+		cursor: pointer;
+		ul {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			li {
+				margin: 0 10px;
+				&.kursi {
+					background: $grey;
+					color: #fff;
+					padding: 5px;
+				}
+			}
+		}
+		&.choosing {
+			border: 1px solid $orange;
+			pointer-events: none;
+			.kursi {
+					background: $orange;
+					border: 1px solid $orange;
+			}
+		}
+		&.choosed , &.choosedd {
+			border: 1px solid $red;
+			.kursi {
+					background: $red;
+					border: 1px solid $red;
+			}
+		}
+	}
+}

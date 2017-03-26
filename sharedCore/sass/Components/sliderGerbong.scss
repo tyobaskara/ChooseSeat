@@ -1,0 +1,55 @@
+.slider.kereta {
+  padding: 0 50px;
+  @include breakpoint(mobile) {
+    padding: 0;
+  }
+  .slick-list {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+  .clip {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-left: 0;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    padding: 10px 30px;
+    color: $grey;
+    h4 {
+      font-weight: bold;
+    }
+    &.slick-current {
+      border: 2px solid $red;
+      transform: scale(1.2);
+      z-index: 5;
+      color: black;
+    }
+  }
+  .slickPrev, .slickNext {
+    font-size: 26px;
+    color: $grey;
+  }
+  .slickPrev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    cursor: pointer;
+    @include breakpoint(mobile){
+      left: -12px;
+    }
+  }
+  .slickNext {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    cursor: pointer;
+    @include breakpoint(mobile){
+      right: -12px;
+    }
+  }
+}
